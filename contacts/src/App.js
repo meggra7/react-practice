@@ -12,16 +12,14 @@ const listTwo = [
   { name: 'Ryan' },
 ];
 
-class ContactList extends React.Component {
-  render() {
-    const people = this.props.contacts;
+function ContactList(props) {
+  const people = props.contacts;
 
-    return <ol>
-      {people.map((person) => (
-        <li key={person.name}>{person.name}</li>
-      ))}
-    </ol>
-  }
+  return <ol>
+    {people.map((person) => (
+      <li key={person.name}>{person.name}</li>
+    ))}
+  </ol>
 }
 
 function App() {
